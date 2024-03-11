@@ -4,12 +4,12 @@ import Sidebar from '../components/Sidebar';
 import Videos from '../components/Videos';
 import { fetchVideos } from '../utils/youtube';
 import JobsLinkedIn from '../components/JobsLinkedIn';
+import { fetchLinkedInJobs } from '../utils/linkedin';
 
 
 
 export function Feed() {
-    const [selectedCategory, set_selectedCategory] = useState('New')
-
+    const [selectedCategory, set_selectedCategory] = useState('Wipro')
 
     return (
         <>

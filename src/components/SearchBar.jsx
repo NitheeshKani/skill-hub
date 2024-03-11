@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Paper, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { jobs } from '../utils/constants';
+import { categories } from '../utils/constants';
 
 const SearchBar = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -41,8 +41,8 @@ const SearchBar = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
             <datalist id="programmingLanguages">
-                {jobs.map((job) => (
-                    <option value={job.companyName} key={job.id}>{job.companyName}</option>
+                {categories.map((item) => (
+                    <option value={item.name} key={item.name}>{item.name}</option>
 
                 ))
 
