@@ -15,7 +15,7 @@ export function JobDetail() {
 
     useEffect(() => {
         let term = searchSplit(id)
-        if (term.lenght == 1) {
+        if (term.length == 1) {
             term.push('india')
         }
         fetchLinkedInJobs(term[0], term[1])
@@ -48,12 +48,13 @@ export function JobDetail() {
                             </Stack>
 
                             <Stack>
-                                <Typography variant="h5" color="white">Description:</Typography>
-                                <Typography variant="body1" color="white">{job.description}</Typography>
+                                <Typography variant="h6" color="white">Description:</Typography>
+                                <br />
+                                <Typography variant="subtitle2" color="white">{job.description}</Typography>
                             </Stack>
 
                         </Stack>
-                        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2 }} alignItems={"center"} justifyContent={'center'}>
+                        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2 }} alignItems={"center"} justifyContent={'center'} m={2}>
                             <Button variant="contained" color="primary" href={`https://www.${job.company}.com`}>Apply Now</Button>
                             {languages.map((language) => (
                                 <Button href={`/search/${language} language`} key={language} startIcon={<CodeIcon />}>{language}</Button>
