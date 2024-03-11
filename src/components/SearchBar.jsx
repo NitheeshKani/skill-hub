@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { Paper, IconButton, Select, MenuItem } from '@mui/material';
+import { Paper, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { categories } from '../utils/constants';
 
 const SearchBar = () => {
     const [searchTerm, set_searchTerm] = useState('');
-    const [query, set_query] = useState("")
-    const [city, set_city] = useState('india')
+
     const navigate = useNavigate();
 
     const onhandleSubmit = (e) => {
         e.preventDefault();
 
-        if (query) {
+        if (set_searchTerm) {
             console.log(searchTerm)
             navigate(`/job/${searchTerm}`)
 
