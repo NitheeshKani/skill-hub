@@ -1,10 +1,6 @@
-import HomeIcon from "@mui/icons-material/Home";
+
 import CodeIcon from "@mui/icons-material/Code";
-import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
-import JavascriptIcon from '@mui/icons-material/Javascript';
-import DataObjectIcon from '@mui/icons-material/DataObject';
-import LinkIcon from '@mui/icons-material/Link';
-import ExtensionIcon from '@mui/icons-material/Extension';
+
 
 
 export const logo = "src/assets/logo.png";
@@ -596,4 +592,33 @@ export const JobWords = [
 	"Scripting"
 ];
 
+export const programmingLanguages = [
+	"JavaScript",
+	"Python",
+	"Java",
+	"C++",
+	"C#",
+	"Ruby",
+	"Swift",
+	"Go",
+	"Rust",
+	"PHP",
+	"TypeScript",
+	"Kotlin",
+	"Scala",
+	"Perl",
+	"Objective-C",
+	"Haskell",
+	"SQL",
+	"HTML/CSS",
+	"Shell",
+	"Assembly"
+];
+
+export const rndlang = () => {
+	const randomIndex = Math.floor(Math.random() * programmingLanguages.length);
+
+	// Get the random programming language
+	return programmingLanguages[randomIndex];
+}
 

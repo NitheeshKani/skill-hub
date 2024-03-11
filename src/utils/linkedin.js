@@ -1,5 +1,4 @@
 import axios from "axios";
-import { JobWords } from "./constants";
 export const newJob = [
 	{
 		id: "QixhLGMsaywtLGUsbixkLCAsVyxlLGIsICxELGUsdixlLGwsbyxwLGUsciwgLC0sICxELHIsdSxwLGE=",
@@ -14,13 +13,13 @@ export const newJob = [
 		salaryRange: "",
 	},
 ];
-export const fetchLinkedInJobs = async (q) => {
+export const fetchLinkedInJobs = async (q, lo) => {
 	const options = {
 		method: "GET",
 		url: "https://jobs-api14.p.rapidapi.com/list",
 		params: {
 			query: q,
-			location: "india",
+			location: lo ? lo : "india",
 			distance: "1.0",
 			language: "en_GB",
 			remoteOnly: "false",
@@ -30,7 +29,7 @@ export const fetchLinkedInJobs = async (q) => {
 		},
 		headers: {
 			"X-RapidAPI-Key":
-				"48015dfc15msha0f0daf4975ac1cp10e6f5jsneda3ce182c41",
+				"90fb3672cemshcd0a169e140a368p10d94fjsn5ee1213c7585",
 			"X-RapidAPI-Host": "jobs-api14.p.rapidapi.com",
 		},
 	};
@@ -43,11 +42,6 @@ export const fetchLinkedInJobs = async (q) => {
 	}
 };
 
-export const findWord = (str) => {
-	JobWords.forEach((word) => {
-		if (str.toLowerCase().includes(word.toLowerCase)) {
-			return word;
-		}
-	});
-	return str.toLowerCase();
+export const searchSplit = (str) => {
+	return str.split(",");
 };

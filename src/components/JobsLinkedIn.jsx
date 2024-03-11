@@ -12,7 +12,7 @@ const JobsLinkedIn = ({ lang }) => {
     const [jobs, set_jobs] = useState(newJob)
 
     useEffect(() => {
-        fetchLinkedInJobs(lang)
+        fetchLinkedInJobs(lang, 'india')
             .then((response) => {
                 set_jobs(response.jobs)
                 console.log(jobs)
