@@ -9,15 +9,7 @@ import JobsLinkedIn from '../components/JobsLinkedIn';
 
 export function Feed() {
     const [selectedCategory, set_selectedCategory] = useState('New')
-    const [videos, set_videos] = useState([])
 
-    // useEffect(() => {
-
-    //     fetchVideos(selectedCategory, 10)
-    //         .then((data) => {
-    //             set_videos(data.items)
-    //         })
-    // }, [selectedCategory])
 
     return (
         <>
@@ -31,8 +23,7 @@ export function Feed() {
                     <Typography variant='h4' color={"white"} fontWeight={'bold'}>
                         {selectedCategory} <span style={{ color: "#0077b5" }}>Jobs</span>
                     </Typography>
-                    {/* videos list
-                    <Videos videos={videos} /> */}
+
                     <JobsLinkedIn lang={selectedCategory} />
                 </Box>
 

@@ -10,9 +10,14 @@ import WatchLaterIcon from '@mui/icons-material/WatchLater';
 
 export function JobDetail() {
     const { id } = useParams()
+
     let jobDetail = {}
     jobs.forEach((job) => {
         if (job.id == id) {
+            jobDetail = job
+
+        }
+        if (job.companyName == id) {
             jobDetail = job
         }
     })
@@ -34,7 +39,7 @@ export function JobDetail() {
                             <Typography variant="body1" color="white">Language Requirement:</Typography>
                             <Stack>
                                 {jobDetail.programmingLanguages.map((language) => (
-                                    <Link to={`/search/${language}`}>
+                                    <Link to={`/search/${language}`} key={language}>
                                         <Button key={language} variant="text" color='primary' startIcon={<CodeIcon />}>{language}</Button>
                                     </Link>
                                 ))}
