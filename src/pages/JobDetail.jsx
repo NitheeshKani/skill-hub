@@ -6,6 +6,7 @@ import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import { fetchLinkedInJobs, searchSplit } from '../utils/linkedin';
 import CodeIcon from "@mui/icons-material/Code";
+import WorkIcon from "@mui/icons-material/Code";
 
 
 export function JobDetail() {
@@ -42,7 +43,9 @@ export function JobDetail() {
                                     <Typography variant="subtitle1" color="grey"><AccountBalanceWalletIcon fontSize='11' sx={{ mr: 1 }} />{job.salaryRange == '' ? 'N/A' : job.salaryRange}</Typography>
                                     <Typography variant="subtitle1" color="grey"><WatchLaterIcon fontSize='11' sx={{ mr: 1 }} /> {job.employmentType}</Typography>
                                     <br />
+                                    <Typography variant="subtitle1" color="grey"><WorkIcon fontSize='11' sx={{ mr: 1 }} /> {job.title}</Typography>
                                     <Typography variant="h5" color="white">{job.location}</Typography>
+
                                     <br />
                                 </Stack>
                             </Stack>
