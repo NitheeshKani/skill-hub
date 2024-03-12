@@ -39,7 +39,7 @@ const SearchBar = () => {
             <input
                 style={{ backgroundColor: '#e3e3e3', width: { xs: '100%', sm: 'auto' }, height: '4vh', borderRadius: '5px' }}
                 className='search-bar'
-                placeholder='Search...'
+                placeholder='Search...ex: Apple,USA'
                 list="programmingLanguages"
                 value={searchTerm}
                 onChange={(e) => set_searchTerm(e.target.value)}

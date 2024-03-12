@@ -14,7 +14,7 @@ export const categories = [
 	{ name: "Maruthi", icon: <CodeIcon /> },
 	{ name: "Adani Group", icon: <CodeIcon /> },
 	{ name: "Hero", icon: <CodeIcon /> },
-	{ name: "Renault", icon: <CodeIcon /> },
+	{ name: "Tata Motors", icon: <CodeIcon /> },
 	{ name: "Twitter", icon: <CodeIcon /> },
 	{ name: "NVIDIA", icon: <CodeIcon /> },
 	{ name: "Amazon", icon: <CodeIcon /> }

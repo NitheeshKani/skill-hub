@@ -29,7 +29,7 @@ export const fetchLinkedInJobs = async (q, lo) => {
 		},
 		headers: {
 			"X-RapidAPI-Key":
-				"0f1bbd3c3amshb750d938f66bfacp175a12jsnf6b3f61fd1f9",
+				"d25bbf6ba6mshdb5fbd5d4bb49fep1d0f08jsn5c5f7e96ddfc",
 			"X-RapidAPI-Host": "jobs-api14.p.rapidapi.com",
 		},
 	};
